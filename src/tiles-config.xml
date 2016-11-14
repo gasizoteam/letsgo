@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions 
+	PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- tile 정의 내릴때 와일드카드(*) 표기가 가능 -->
+	<definition name="t:index" template="/WEB-INF/view/template.jsp">
+		<!-- <put-attribute name="header" value="/WEB-INF/view/common/search.jsp" />
+		<put-attribute name="nav" value="/WEB-INF/view/common/nav.jsp" />
+		<put-attribute name="article" value="/WEB-INF/view/common/main.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/view/common/banner.jsp" /> -->
+	</definition>
+	
+</tiles-definitions>
