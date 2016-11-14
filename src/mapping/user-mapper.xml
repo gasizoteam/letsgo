@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	
+	
+	<insert id="insertPojo" parameterType="com.web.admin.model.JoinData">
+		insert into users values(#{userid}, #{userpass}, #{username }, #{userbirth }, #{userphone }, #{usergender }, sysdate)
+	</insert>
+	
+	<insert id="insertHash" parameterType="java.util.HashMap">
+		insert into users values(#{userid}, #{userpass}, #{username }, #{userbirth }, #{userphone }, #{usergender }, sysdate)
+	</insert>
+
+	<select id="findIdPass" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+		select * from users where userid =#{userid} and userpass=#{userpass}
+	</select>
+	<!-- select 명령문 resultType을 반드시 작성해야 됨! -->
+	
+</mapper>

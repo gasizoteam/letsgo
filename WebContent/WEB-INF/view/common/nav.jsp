@@ -8,21 +8,21 @@
 				<legend>
 					<b>로그인</b>
 				</legend>
-				<form action="/member/loginAuth.nhn">
+				<form action="/user/login">
 					<b>ID</b> &nbsp;
 							<span style="font-size: 8pt;"> <input type="checkbox"
 								name="save" />아이디저장
 							</span>
 							<br />
 							<input type="email" required="required"
-								placeholder="email형식으로 입력" name="id" />
+								placeholder="email형식으로 입력" name="userid" />
 					<br /> <b>PASS</b><br /> <input type="password"
-						required="required" name="pass" /><br />
+						required="required" name="userpass" /><br />
 					<hr />
 					<input type="submit" value="로그인" />
 				</form>
 			</fieldset>
-			<a href="/member/join.nhn">아직회원이아니십니까?</a>
+			<a href="/user/join">아직회원이아니십니까?</a>
 			<br/>
 			<a href="javascript:openfindpass()">비밀번호를 잃어버렸니?</a>
 			<script>
@@ -54,7 +54,7 @@
 					<li><a href="/list/view.nhn">데이터 저장 목록(all)</a></li>
 					<li><a href="/file/reg.nhn">파일 등록</a></li>
 					<li><a href="/member/.nhn">메일인증</a></li>
-					<li><a href="/member/loginOut.nhn">로그아웃</a></li>
+					<li><a href="/user/loginOut">로그아웃</a></li>
 				</ul>
 			</fieldset>
 		</div>
