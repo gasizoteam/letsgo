@@ -3,6 +3,9 @@
 test
 
 
+<<<<<<< HEAD
 아아아아아앙
 
 ㅂㅈㄷㅂㅈㄷ
+=======
+>>>>>>> branch 'master' of https://github.com/gasizoteam/letsgo.git
