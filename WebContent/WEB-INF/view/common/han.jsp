@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
 1231
+=======
+
+d
+d
+
+>>>>>>> branch 'master' of https://github.com/gasizoteam/letsgo.git
 </body>
 </html>
