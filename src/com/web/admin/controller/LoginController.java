@@ -1,11 +1,16 @@
 package com.web.admin.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.web.admin.model.LoginService;
@@ -29,6 +34,62 @@ public class LoginController {
 			mav.setViewName("t:/index");
 		}
 		return mav;
+	}
+	
+	@RequestMapping("/")
+	@ResponseBody
+	public ModelAndView editPass(HttpSession session,HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView();
+		String uid = (String)session.getAttribute("userId");
+		String newpass = request.getParameter("");
+		Map map = null;
+		if(uid != null || !uid.equals("")) {
+			mav.setViewName("메인페이지");
+		}
+		
+		map = new HashMap();
+		map.put("id", uid);
+		map.put("pass", newpass);
+		boolean rst = ls.editPass(map);
+		
+		if(rst) {
+			mav.addObject("", "");
+		}else {
+			mav.addObject("", "");
+		}
+		mav.setViewName("");
+		
+		return mav;
+		
+	}
+	
+	
+	// 개인정보 수정
+	@RequestMapping("/")
+	@ResponseBody
+	public ModelAndView editUser(HttpSession session,HttpServletRequest request) {
+		ModelAndView mav = new ModelAndView();
+		String uid = (String)session.getAttribute("userId");
+		String newpass = request.getParameter("");
+		Map map = null;
+		
+		if(uid != null || !uid.equals("")) {
+			mav.setViewName("메인페이지");
+		}
+		
+		map = new HashMap();
+		
+		boolean rst = ls.editPass(map);
+		
+		if(rst) {
+			mav.addObject("", "");
+		}else {
+			mav.addObject("", "");
+		}
+		mav.setViewName("");
+		
+		return mav;
+		
 	}
 	
 }

@@ -14,4 +14,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<!-- select 명령문 resultType을 반드시 작성해야 됨! -->
 	
+<!-- 비밀번호 수정 -->
+	<update id="updatepass" parameterType="java.util.HashMap">
+		update users set userpass = #{pass} where userid=#{id}
+	</update>
+	
+<!-- 개인정보 수정 -->
+	<update id="updateUserMap" parameterType="java.util.HashMap">
+		update users 
+			set username = #{name}, userbirth=#{birth}, userphone=#{phone}
+		where userid=#{id}
+	</update>
+	
+	<update id="updateUser" parameterType="java.util.HashMap">
+		update users 
+			set username = #{username}, userbirth=#{userbirth}, userphone=#{userphone}
+		where userid=#{userid}
+	</update>
+	
 </mapper>
