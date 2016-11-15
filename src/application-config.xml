@@ -10,12 +10,12 @@
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
 
-	<!-- <bean
+	 <bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 		<property name="order" value="9" />
-	</bean> -->
+	</bean> 
 	
 <!-- tiles 연동 -->
 	<bean id="tilesConfigurer"
@@ -51,12 +51,12 @@
 
 
 <!-- 디비 연동 start -->
-	<!-- jdbc.properties 읽어오기 -->
+	 <!-- jdbc.properties 읽어오기 -->
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:jdbc.properties" />
 	</bean>
-	
+
 	<!-- 디비 설정 -->
 	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">
 		<property name="driverClassName" value="${driver}" />
@@ -64,10 +64,10 @@
 		<property name="username" value="${username}" />
 		<property name="password" value="${password}" />
 	</bean>
-	<!-- mybatis mapping 연동 -->
+	<!-- mybatis mapping 연동 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath:mapping/*.xml" />
 	</bean>
-
+-->
 </beans>
