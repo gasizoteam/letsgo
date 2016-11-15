@@ -9,4 +9,9 @@ public class testGo {
 	public String source01() {
 		return "t:index";
 	}
+	
+	@RequestMapping("/upload")
+	public String source02(){
+		return "t:upload";
+	}
 }

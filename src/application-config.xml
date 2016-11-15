@@ -10,31 +10,27 @@
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
 
-	 <bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/" />
-		<property name="suffix" value=".jsp" />
-		<property name="order" value="9" />
-	</bean> 
-	
-<!-- tiles 연동 -->
+
+
+	<!-- tiles 연동 -->
 	<bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
-		<property name="definitions">  
+		<property name="definitions">
 			<list>
 				<value>classpath:tiles-config.xml</value>
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="tilesViewResolver" p:order="2"
 		class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
 
 	<!-- tiles 로 해결하는 view Resolver를 쓰려면 .. tiles 라미브러리가 필요. -->
-	<bean id="internalResourceViewResolver" p:order="9" p:prefix="/WEB-INF/view/" p:suffix=".jsp"
+	<bean id="internalResourceViewResolver" p:order="9" p:prefix="/WEB-INF/view/"
+		p:suffix=".jsp"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
-	
-<!-- 메일등록빈들 등록 -->
+
+	<!-- 메일등록빈들 등록 -->
 	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
@@ -50,8 +46,8 @@
 	</bean>
 
 
-<!-- 디비 연동 start -->
-	 <!-- jdbc.properties 읽어오기 -->
+	<!-- 디비 연동 start -->
+	<!-- jdbc.properties 읽어오기 -->
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:jdbc.properties" />
@@ -64,10 +60,8 @@
 		<property name="username" value="${username}" />
 		<property name="password" value="${password}" />
 	</bean>
-	<!-- mybatis mapping 연동 
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath:mapping/*.xml" />
-	</bean>
--->
+	<!-- mybatis mapping 연동 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource" /> <property name="mapperLocations" 
+		value="classpath:mapping/*.xml" /> </bean> 
 </beans>
