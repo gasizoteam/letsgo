@@ -11,7 +11,6 @@
 	<b>GENDER</b> <input type="radio" required="required" name="usergender" value="m"/>남
  	<input type="radio" required="required" name="usergender" value="f"/>여
 	<br /> 
-	
 	<input type="submit" />
 </form>
 

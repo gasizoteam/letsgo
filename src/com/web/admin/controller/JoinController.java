@@ -26,13 +26,14 @@ public class JoinController {
 	public ModelAndView login(){
 		ModelAndView mav = new ModelAndView();
 			mav.setViewName("t:join");
-		return mav;
+		
+			return mav;
 	}
 	
 	@RequestMapping("/user/joinConfirm")
 	public ModelAndView LoginAuth(HttpServletRequest req){
 		ModelAndView mav = new ModelAndView();
-			mav.setViewName("t:joinConfirm");
+			mav.setViewName("t:index");
 			
 			HashMap map = new HashMap<>();
 				map.put("userpass", req.getParameter("userpass"));
@@ -45,6 +46,7 @@ public class JoinController {
 				try {
 					java.util.Date date = sdf.parse(req.getParameter("userbirth"));
 					map.put("userbirth", date);
+					System.out.println("회원가입 성공");
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}

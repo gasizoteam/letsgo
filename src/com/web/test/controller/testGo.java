@@ -10,8 +10,10 @@ public class testGo {
 		return "t:index";
 	}
 	
-	@RequestMapping("/upload")
+	@RequestMapping("/cateGo")
 	public String source02(){
-		return "t:upload";
+		
+		
+		return "t01";
 	}
 }
