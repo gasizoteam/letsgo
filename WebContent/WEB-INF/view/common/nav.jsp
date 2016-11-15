@@ -50,10 +50,6 @@
 				</legend>
 				<ul>
 					<li><a href="">내 정보</a></li>
-					<li><a href="/visit/">방명록</a></li>
-					<li><a href="/list/view.nhn">데이터 저장 목록(all)</a></li>
-					<li><a href="/file/reg.nhn">파일 등록</a></li>
-					<li><a href="/member/.nhn">메일인증</a></li>
 					<li><a href="/user/loginOut">로그아웃</a></li>
 				</ul>
 			</fieldset>
