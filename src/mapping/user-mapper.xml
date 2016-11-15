@@ -5,10 +5,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="user">
 	
 	
-	<insert id="insertPojo" parameterType="com.web.admin.model.JoinData">
-		insert into users values(#{userid}, #{userpass}, #{username }, #{userbirth }, #{userphone }, #{usergender }, sysdate)
-	</insert>
-	
 	<insert id="insertHash" parameterType="java.util.HashMap">
 		insert into users values(#{userid}, #{userpass}, #{username }, #{userbirth }, #{userphone }, #{usergender }, sysdate)
 	</insert>
