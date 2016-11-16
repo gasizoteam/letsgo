@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class testGo {
-	@RequestMapping("/index")
+	@RequestMapping({"/index", "/"})
 	public String source01() {
 		return "t:index";
 	}
